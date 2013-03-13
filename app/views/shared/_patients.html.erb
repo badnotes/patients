@@ -1,0 +1,24 @@
+<div class="m10 right">
+<span><%= link_to('more','/patients') %></span>
+<span><%= link_to('new','/patients/new') %></span>
+</div>
+<% if (!@patients.nil?) && @patients.any? %>
+	<table class="table">
+		<tr>
+		<td>NO.</td>
+		<td>Name</td>
+		<td>Status</td>
+		<td>ViewCount</td>
+		</tr>
+		<% @patients.each_with_index do |patient, i | %>
+		<tr>
+			<td><%= i+1 %></td>
+			<td><%= patient.first_name %></td>
+			<td><%= patient.status %></td>
+			<td><%= patient.viewed_count %></td>
+		</tr>
+		<% end %>
+	</table>
+<% else %>
+	<div> patients is null </div>
+<% end %>

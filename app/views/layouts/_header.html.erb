@@ -1,0 +1,18 @@
+<header class="navbar navbar-fixed-top">
+	 <div class="navbar-inner">
+	 	<div class="container">
+	 		<%= link_to "patients", '/', id: "logo" %>
+	 		<nav>
+	 			<ul class="nav pull-right">
+	 				<% if session[:locale] == "en" %>
+				                <li><%= link_to "[Chinese]", :controller => controller.controller_name,
+				                        :action => controller.action_name, :locale => "zh" %></li>
+				              <% else %>
+				                <li><%= link_to "[英文]", :controller => controller.controller_name,
+				                        :action => controller.action_name, :locale => "en" %></li>
+				              <% end %>
+	 			</ul>
+	 		</nav>
+	 	</div>
+	 </div>
+</header>

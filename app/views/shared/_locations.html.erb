@@ -1,0 +1,22 @@
+<div class="m10 right">
+	<span><%= link_to('more','/locations') %></span>
+	<span><%= link_to('new','/locations/new') %></span>
+</div>
+<% if (!@locations.nil?) && @locations.any? %>
+	<table class="table">
+		<tr>
+		<td>NO.</td>
+		<td>Name</td>
+		<td>Code</td>
+		</tr>
+		<% @locations.each_with_index do |location, i | %>
+		<tr>
+		<td><%= i+1 %></td>
+		<td><%= location.name %></td>
+		<td><%= location.code %></td>
+		</tr>
+		<% end %>
+	</table>
+<% else %>
+	<div> locations is null </div>
+<% end %>
