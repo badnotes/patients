@@ -4,7 +4,7 @@ describe Patient do
 
     before do 
         @patient = Patient.new( first_name: "firest", middle_name: "middle", last_name: "last", status: "Initial",
-        	gender: "Male", location_id: "1234", birth: "2013-03-01 09:01:01", medical_record_number: "1", viewed_count: "1" )
+        	gender: "Male", location_id: "1234", birth: "2013-03-01 09:01:01", viewed_count: "1" )
     end
 
     subject { @patient }

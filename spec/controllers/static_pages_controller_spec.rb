@@ -8,10 +8,16 @@ describe StaticPagesController do
       response.should be_success
     end
 
-    it "show a location " do
+    it "show all locations " do
        get 'home'
-       @location = Location.find(1)
+       @location = Location.all
      end
+
+     it "show all patients" do
+        get 'home'
+        @patients = Patient.all
+      end
+
   end
 end
 

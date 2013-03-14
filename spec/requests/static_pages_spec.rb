@@ -1,7 +1,12 @@
 require 'spec_helper'
 
-describe "static_pages/home.html.erb" do
-  # pending "add some examples to (or delete) #{__FILE__}"
+describe "StaticPages" do
+  describe "GET /static_pages" do
+    it "works! (now write some real specs)" do
+      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
+      get home_path
+      response.status.should be(200)
+    end
 
   subject {page} #! set page as default test subject
 
@@ -10,7 +15,6 @@ describe "static_pages/home.html.erb" do
     it { should have_content('locations') }   # include the part of locations
     it { should have_content('patients') }  # include the latest patients
   end
- 
- 
-end 
 
+  end
+end
