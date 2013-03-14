@@ -1,6 +1,6 @@
 <div class="m10 right">
-	<span><%= link_to('more','/locations') %></span>
-	<span><%= link_to('new','/locations/new') %></span>
+	<span><%= link_to(I18n.t('new'),'/locations/new') %>&nbsp;</span>
+	<span><%= link_to(I18n.t('more'),'/locations') %>>></span>
 </div>
 <% if (!@locations.nil?) && @locations.any? %>
 	<table class="table">

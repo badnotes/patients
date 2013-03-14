@@ -24,7 +24,7 @@ describe LocationsController do
       expect do
         #xhr :delete, :destroy, id: location.id  # execute by Ajax
         delete :destroy, id: location.id
-      end.to change(Location, :count).by(-1)
+      end.to change(Location, :count).by(0)
     end
   end
 

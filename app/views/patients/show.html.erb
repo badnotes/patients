@@ -40,5 +40,5 @@
   <%= @patient.location.name %>
 </p>
 
-<%= link_to 'Edit', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patients_path %>
+<%= link_to I18n.t('edit'), edit_patient_path(@patient) %> |
+<%= link_to I18n.t('back'), patients_path %>

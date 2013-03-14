@@ -1,15 +1,17 @@
 zh:
   hello: "你好，世界"
   home: "首页"
-  help: "帮助"
-  users: "用户"
-  signin: "登录"
-  account: "账户"
-  about: "关于"
-  contact: "联系"
-  news: "新闻"
+  more: "更多"
+  new: "新建"
+  show: "查看"
+  edit: "编辑"
+  updare: "更新"
+  delete: "删除"  
+  back: "返回"
+  locations: "地区"
+  patients: "病例"  
   date:
-    abbr_day_names:
+    abbr_day_na新建mes:
     - 日
     - 一
     - 二

@@ -47,6 +47,7 @@ class PatientsController < ApplicationController
     @location = Location.find(params[:patient][:location_id] )
     @patient = @location.patients.create(params[:patient]);
     @patient.is_deleted = false
+    @patient.viewed_count = 0
 
     #@patient = Patient.new(params[:patient])
     #@patient =Patient.new(params[:patient]);
@@ -85,7 +86,7 @@ class PatientsController < ApplicationController
   def destroy
     @patient = Patient.find(params[:id])
     #@patient.destroy
-    @patient.update_attribute(:is_deleted => true)
+    Patient.update(@patient.id, :is_deleted => true)
     respond_to do |format|
       format.html { redirect_to patients_url }
       format.json { head :no_content }

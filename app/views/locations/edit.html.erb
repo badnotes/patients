@@ -1,6 +1,7 @@
 <h1>Editing location</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @location %> |
-<%= link_to 'Back', locations_path %>
+<div class="center">
+<%= link_to I18n.t('show'), @location %> |
+<%= link_to I18n.t('back'), locations_path %>
+</div>

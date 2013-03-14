@@ -1,11 +1,12 @@
 <div class="m10 right">
-<span><%= link_to('more','/patients') %></span>
-<span><%= link_to('new','/patients/new') %></span>
+<span><%= link_to(I18n.t('new'),'/patients/new') %>&nbsp;</span>
+<span><%= link_to(I18n.t('more'),'/patients') %>>></span>
 </div>
 <% if (!@patients.nil?) && @patients.any? %>
 	<table class="table">
 		<tr>
 		<td>NO.</td>
+		<td>MR</td>
 		<td>Name</td>
 		<td>Status</td>
 		<td>ViewCount</td>
@@ -13,7 +14,8 @@
 		<% @patients.each_with_index do |patient, i | %>
 		<tr>
 			<td><%= i+1 %></td>
-			<td><%= link_to patient.first_name, "patients/#{patient.id}" %></td>
+			<td><%= "MR"+"0"*(6-patient.id.to_s.length)+patient.id.to_s %></td>
+			<td><%= link_to patient.last_name+', '+patient.first_name+' '+patient.middle_name, "patients/#{patient.id}" %></td>
 			<td><%= patient.status %></td>
 			<td><%= patient.viewed_count %></td>
 		</tr>

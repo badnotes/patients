@@ -31,9 +31,10 @@ textarea {
 .ml10 {
 	margin-left: 10px;
 }
-.center h1,h2 {
-	margin-bottom: 10px;
-}
+.clear {WIDTH: 0px; DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; CLEAR: both; OVERFLOW: hidden}
+.clearfix:after {DISPLAY: block; HEIGHT: 0px; CLEAR: both; CONTENT: " "}
+.clearfix {	_zoom: 1}* + HTML 
+.clearfix {OVERFLOW: hidden}
  
 /* typography */
 h1, h2, h3, h4, h5, h6 {

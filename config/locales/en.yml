@@ -1,13 +1,15 @@
 en:
   hello: "hello world"
   home: "Home"
-  help: "Help"
-  users: "Users"
-  signin: "Sing in"
-  account: "Account"
-  about: "About"
-  contact: "Contact"
-  news: "News"
+  more: "More"
+  new: "New"
+  show: "Show"
+  edit: "Edit"
+  update: "Update"
+  delete: "Delete"
+  back: "Back"
+  locations: "Locations"
+  patients: "Patients"
   date:
     abbr_day_names:
     - Sun

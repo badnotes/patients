@@ -1,6 +1,7 @@
 <h1>Editing patient</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @patient %> |
-<%= link_to 'Back', patients_path %>
+<div class="center">
+<%= link_to I18n.t('show'), @patient %> |
+<%= link_to I18n.t('back'), patients_path %>
+</div>

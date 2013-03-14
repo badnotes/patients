@@ -10,40 +10,38 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="span4 offset4">
   <div class="field">
-    <%= f.label :first_name %><br />
+    <%= f.label :first_name %>
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :middle_name %><br />
+    <%= f.label :middle_name %>
     <%= f.text_field :middle_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br />
+    <%= f.label :last_name %>
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :birth %><br />
+    <%= f.label :birth %>
     <%= f.date_select :birth %>
   </div>
   <div class="field">
-    <%= f.label :gender %><br />
+    <%= f.label :gender %>
     <%= f.text_field :gender %>
   </div>
   <div class="field">
-    <%= f.label :status %><br />
+    <%= f.label :status %>
     <%= f.text_field :status %>
   </div>
   <div class="field">
-    <%= f.label :viewed_count %><br />
-    <%= f.number_field :viewed_count %>
-  </div>
-  <div class="field">
-    <%= f.label :location_id %><br />
+    <%= f.label :location_id %>
     <%= f.number_field :location_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
+<div class="clear"></div>
 <% end %>
