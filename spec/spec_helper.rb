@@ -7,6 +7,8 @@ require 'rspec/autorun'
 # Add this to load Capybara integration:
 require 'capybara/rspec'
 require 'capybara/rails'
+require 'factory_girl_rails'
+
 # include Capybara::DSL     
 module ::RSpec::Core
   class ExampleGroup

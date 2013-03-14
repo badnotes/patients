@@ -12,6 +12,20 @@ describe LocationsController do
       get :index
       expect(response).to render_template("index")
     end
-
+    it "renders the new template" do
+      get :new
+      expect(response).to render_template("new")
+    end
   end
+
+  describe "destroy a location" do
+    let(:location) { FactoryGirl.create(:location) }
+    it "should decrement the Location count " do 
+      expect do
+        #xhr :delete, :destroy, id: location.id  # execute by Ajax
+        delete :destroy, id: location.id
+      end.to change(Location, :count).by(-1)
+    end
+  end
+
 end

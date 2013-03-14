@@ -31,20 +31,14 @@
 </p>
 
 <p>
-  <b>Location:</b>
-  <%= @patient.location %>
-</p>
-
-<p>
   <b>Viewed count:</b>
   <%= @patient.viewed_count %>
 </p>
 
 <p>
   <b>Location:</b>
-  <%= @patient.location_id %>
+  <%= @patient.location.name %>
 </p>
-
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>

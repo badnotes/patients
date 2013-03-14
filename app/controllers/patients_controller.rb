@@ -3,7 +3,7 @@ class PatientsController < ApplicationController
   # GET /patients.json
 
   def index
-    @patients = Patient.all
+    @patients = Patient.find(:all, :conditions =>{ :is_deleted => false })
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +15,11 @@ class PatientsController < ApplicationController
   # GET /patients/1.json
   def show
     @patient = Patient.find(params[:id])
-
+    if @patient.is_deleted?
+      @patient = nil
+    else
+      Patient.update(@patient.id, :viewed_count => @patient.viewed_count +=1)
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @patient }
@@ -42,6 +46,7 @@ class PatientsController < ApplicationController
   def create
     @location = Location.find(params[:patient][:location_id] )
     @patient = @location.patients.create(params[:patient]);
+    @patient.is_deleted = false
 
     #@patient = Patient.new(params[:patient])
     #@patient =Patient.new(params[:patient]);
@@ -79,8 +84,8 @@ class PatientsController < ApplicationController
   # DELETE /patients/1.json
   def destroy
     @patient = Patient.find(params[:id])
-    @patient.destroy
-
+    #@patient.destroy
+    @patient.update_attribute(:is_deleted => true)
     respond_to do |format|
       format.html { redirect_to patients_url }
       format.json { head :no_content }

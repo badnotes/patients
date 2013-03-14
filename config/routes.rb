@@ -1,11 +1,12 @@
 Patients::Application.routes.draw do
 
-  resources :locations
-  resources :patients
 
   root to: 'static_pages#home'
   match '/', to: 'static_pages#home'
   match '/home', to: 'static_pages#home'
+
+  resources :locations
+  resources :patients
 
   # resources :locations do
   #   resources :patients

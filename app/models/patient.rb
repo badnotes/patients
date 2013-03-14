@@ -1,5 +1,5 @@
 class Patient < ActiveRecord::Base
-  attr_accessible :birth, :first_name, :gender, :last_name, :middle_name, :status, :viewed_count, :location_id
+  attr_accessible :id, :birth, :first_name, :gender, :last_name, :middle_name, :status, :viewed_count, :location_id, :is_deleted
   belongs_to :location
 
   default_scope order: 'patients.created_at DESC'

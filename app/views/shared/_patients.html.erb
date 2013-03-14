@@ -13,7 +13,7 @@
 		<% @patients.each_with_index do |patient, i | %>
 		<tr>
 			<td><%= i+1 %></td>
-			<td><%= patient.first_name %></td>
+			<td><%= link_to patient.first_name, "patients/#{patient.id}" %></td>
 			<td><%= patient.status %></td>
 			<td><%= patient.viewed_count %></td>
 		</tr>
