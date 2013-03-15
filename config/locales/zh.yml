@@ -9,7 +9,8 @@ zh:
   delete: "删除"  
   back: "返回"
   locations: "地区"
-  patients: "病例"  
+  patients: "病人"  
+  onTreatment: "在诊病人"
   date:
     abbr_day_na新建mes:
     - 日

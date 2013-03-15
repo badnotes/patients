@@ -7,7 +7,7 @@ describe "static_pages/home.html.erb" do
 
   describe "HomePage" do
     before { visit home_path } 
-    it { should have_content('locations') }   # include the part of locations
+    #it { should have_content('locations') }   # include the part of locations
     it { should have_content('patients') }  # include the latest patients
   end
  

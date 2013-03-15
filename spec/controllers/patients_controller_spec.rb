@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe LocationsController do
+describe PatientsController do
   describe "GET #index" do
     it "responds successfully with an HTTP 200 status code" do
       get :index
@@ -19,13 +19,13 @@ describe LocationsController do
   end
 
 
-  describe "destroy a location" do
-    let(:location) { FactoryGirl.create(:location) }
-    it "should decrement the Location count " do 
+  describe "destroy a patient" do
+    let(:patient) { FactoryGirl.create(:patient) }
+    it "should decrement the patient count " do 
       expect do
-        #xhr :delete, :destroy, id: location.id  # execute by Ajax
-        delete :destroy, id: location.id
-      end.to change(Location, :count).by(0)
+        #xhr :delete, :destroy, id: patient.id  # execute by Ajax
+        delete :destroy, id: patient.id
+      end.to change(Patient, :count).by(1)
     end
   end
 

@@ -9,7 +9,7 @@ FactoryGirl.define do
         last_name "last"
         status "Initial"
         gender "Male"
-        location :location
+        location_id "2"
         birth "2013-03-01 090101"
         viewed_count "1" 
     end
